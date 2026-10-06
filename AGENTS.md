@@ -4,18 +4,22 @@ Estas instruções se aplicam ao projeto Deep Learning e às notas criadas nele.
 
 ## Como usar os protocolos
 
-- Quando o usuário pedir um protocolo pelo nome ou por uma das formas de chamada da lista abaixo, ler o arquivo indicado antes de executar o pedido e seguir suas instruções.
+- Um protocolo só deve ser ativado quando o usuário escrever `!` imediatamente antes de uma das formas de chamada da lista abaixo.
+- Quando o usuário chamar um protocolo com `!`, ler o arquivo indicado antes de executar o pedido e seguir suas instruções.
+- Se o nome ou a forma de chamada aparecer sem `!`, tratar a expressão como texto comum e não ativar o protocolo.
 - Os caminhos dos arquivos são relativos à pasta deste AGENTS.md.
 - Os arquivos de protocolos não são carregados automaticamente: este índice orienta a leitura do protocolo solicitado.
 - Não aplicar protocolos que não foram solicitados. Não há um protocolo padrão definido.
 - Se o protocolo solicitado não estiver na lista ou seu arquivo não existir, informar isso ao usuário e pedir a orientação que falta.
 - Usar Markdown compatível com Obsidian nas notas.
+-
 
 ## Lista de protocolos
 
-| Protocolo | Formas de chamada | Arquivo com as instruções |
-| --- | --- | --- |
-| Nota rápida | "nota rápida", "nota rapida", "usar protocolo nota rápida" | [nota-rapida.md](protocolos/nota-rapida.md) |
+| Protocolo      | Formas de chamada                                                          | Arquivo com as instruções                         |
+| -------------- | -------------------------------------------------------------------------- | ------------------------------------------------- |
+| Nota rápida    | "!na", "!nota rápida", "!nota rapida", "!usar protocolo nota rápida"           | [nota-rapida.md](protocolos/nota-rapida.md)       |
+| Pergunta aluno | "!pa", "!pergunta aluno", "!perguntas aluno", "!usar protocolo pergunta aluno" | [pergunta-aluno.md](protocolos/pergunta-aluno.md) |
 
 ## Como editar ou criar um protocolo
 

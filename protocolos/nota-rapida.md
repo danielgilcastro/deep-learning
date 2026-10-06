@@ -2,7 +2,9 @@
 
 ## Quando usar
 
-Quando o usuário pedir uma "nota rápida" sobre um assunto.
+Quando o usuário iniciar o pedido com `!nota rápida`, `!nota rapida` ou `!na`.
+
+Sem o prefixo `!`, a expressão não deve ativar este protocolo.
 
 ## Regras
 
