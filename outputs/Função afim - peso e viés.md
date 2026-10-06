@@ -21,7 +21,7 @@ Nessa expressão:
 
 O **peso** indica o quanto uma entrada influencia o resultado. Um peso com valor alto pode dar mais importância à entrada, enquanto um peso negativo pode fazer essa entrada reduzir o resultado.
 
-O **viés** é um valor adicional que desloca o resultado. Ele permite que o neurônio produza uma resposta mais adequada mesmo quando todas as entradas são zero.
+O [[Viés|viés]] é um valor adicional que desloca o resultado. Ele permite que o neurônio produza uma resposta mais adequada mesmo quando todas as entradas são zero.
 
 Por exemplo, considere $x = 3$, $w = 2$ e $b = 1$:
 
@@ -30,4 +30,3 @@ z = 2 \cdot 3 + 1 = 7
 $$
 
 Durante o treinamento, a rede ajusta os pesos e os vieses. O resultado da função afim normalmente segue para uma [[Função de ativação]], que decide como o neurônio responderá.
-

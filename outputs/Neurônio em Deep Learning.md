@@ -15,7 +15,7 @@ Um **neurônio artificial** é uma pequena unidade de cálculo de uma rede neura
 
 O neurônio artificial foi inspirado, de forma simplificada, no funcionamento dos neurônios biológicos. Em uma rede neural, ele recebe entradas como $x_1, x_2, \ldots, x_n$. Cada entrada é multiplicada por um **peso** $w_i$, que representa o quanto aquela informação é importante para a decisão.
 
-Depois, o neurônio soma os valores ponderados e acrescenta um **viés** (*bias*):
+Depois, o neurônio soma os valores ponderados e acrescenta um [[Viés|viés]] (*bias*):
 
 $$
 z = w_1x_1 + w_2x_2 + \cdots + w_nx_n + b

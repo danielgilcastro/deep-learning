@@ -18,9 +18,9 @@ Por exemplo, se o valor correto é $10$, uma previsão igual a $9{,}8$ deve prod
 
 Existem diferentes funções de perda para diferentes problemas:
 
-- **erro quadrático médio:** comum quando a rede prevê valores numéricos;
+- **[[MAE|erro absoluto médio (MAE)]]:** mede a distância média entre a previsão e o valor correto;
+- **erro quadrático médio:** comum quando a rede prevê valores numéricos e erros grandes devem receber uma punição maior;
 - **entropia cruzada binária:** comum em classificações com duas possibilidades;
 - **entropia cruzada categórica:** comum em classificações com várias categorias.
 
 A função de perda não corrige a rede sozinha. Ela fornece uma medida que permite calcular como os pesos e vieses devem mudar. Por isso, ela é uma parte central do processo descrito em [[Como a rede aprende]].
-

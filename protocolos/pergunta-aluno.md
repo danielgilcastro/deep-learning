@@ -13,7 +13,7 @@ Salvar as notas na pasta `perguntas aluno`, dentro do projeto Deep Learning. Cri
 ## Criar ou alimentar a nota
 
 1. Identificar a pergunta do aluno no pedido. Se nenhuma pergunta tiver sido informada, pedir a pergunta antes de criar a nota.
-2. Usar a própria pergunta como nome do arquivo, com a extensão `.md`.
+2. Usar a própria pergunta como nome  tratado ,do arquivo, com a extensão `.md`.
 3. Para o nome do arquivo ser válido no Windows, substituir os caracteres proibidos (`< > : " / \ | ? *`) por espaços, remover espaços repetidos e pontos ou espaços no final. Se necessário, encurtar o nome ou ajustar um nome reservado do Windows, mantendo a pergunta reconhecível. Preservar a pergunta completa no título dentro da nota.
 4. Procurar a nota correspondente na pasta `perguntas aluno`. Se já existir, atualizar ou complementar essa nota, preservando seu conteúdo útil e evitando repetir informações. Se não existir, criar uma nova nota.
 5. Registrar a pergunta e sua resposta na nota. Explicar a resposta com linguagem fácil e definir os termos técnicos necessários.

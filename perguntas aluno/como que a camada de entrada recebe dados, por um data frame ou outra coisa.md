@@ -29,3 +29,69 @@ Cada tipo de dado precisa ser transformado de uma maneira adequada:
 - **áudios:** sequência de valores do som ou de características extraídas dele.
 
 Os dados também costumam ser enviados em pequenos grupos chamados **lotes**, ou *batches*. Portanto, o DataFrame pode ser o recipiente usado na preparação, mas a camada de entrada recebe efetivamente os valores numéricos em forma de tensor.
+
+## Nos códigos, a gente passa um arquivo com esse conteúdo? Como isso acontece?
+
+## Resposta
+
+Podemos começar com um arquivo, mas normalmente **não passamos o arquivo diretamente para a camada de entrada**. O código primeiro abre o arquivo, organiza seu conteúdo e transforma os valores em arrays ou tensores numéricos.
+
+No exercício das cédulas da Aula 2, os dados estão em um arquivo disponível na internet. Este trecho lê o conteúdo e cria um DataFrame:
+
+```python
+URL = ("https://archive.ics.uci.edu/ml/machine-learning-databases/"
+       "00267/data_banknote_authentication.txt")
+
+COLUNAS = ["variance", "skewness", "kurtosis", "entropy"]
+
+cedulas = pd.read_csv(
+    URL,
+    header=None,
+    names=COLUNAS + ["class"]
+)
+```
+
+O `pd.read_csv()` acessa o endereço, lê as linhas do arquivo e coloca os dados em uma tabela chamada `cedulas`. Se o arquivo estivesse salvo no computador, poderíamos passar seu caminho no lugar da URL:
+
+```python
+cedulas = pd.read_csv("dados/cedulas.csv")
+```
+
+Depois, o código separa as **entradas** da **resposta correta**:
+
+```python
+X = cedulas[COLUNAS].values
+y = cedulas["class"].values
+```
+
+Nesse código:
+
+- `X` contém as quatro características de cada cédula;
+- `y` contém o rótulo de cada exemplo: cédula falsa ou verdadeira;
+- `.values` transforma os dados selecionados do DataFrame em arrays numéricos.
+
+Em seguida, os dados são divididos e preparados. Por fim, os arrays são entregues ao treinamento:
+
+```python
+modelo.fit(X_train, y_train, epochs=20)
+```
+
+O caminho completo é:
+
+```text
+arquivo ou URL
+        ↓
+pd.read_csv()
+        ↓
+DataFrame
+        ↓
+separação em X e y
+        ↓
+arrays ou tensores
+        ↓
+modelo.fit(X_train, y_train)
+```
+
+Também é possível criar os dados diretamente no código, sem usar um arquivo. Isso acontece no exercício dos pontos no centro e no anel: o NumPy gera as coordenadas e os rótulos, que depois são enviados ao modelo.
+
+Portanto, o arquivo é apenas uma possível fonte dos dados. A rede recebe os números preparados pelo código, não o arquivo em si.

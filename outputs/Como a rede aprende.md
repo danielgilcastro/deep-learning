@@ -2,7 +2,7 @@
 
 ## Resumo
 
-Uma rede neural aprende fazendo previsões, medindo seus erros e ajustando seus pesos e vieses. Esse processo é repetido muitas vezes até que as previsões melhorem.
+Uma rede neural aprende fazendo previsões, medindo seus erros e ajustando seus pesos e [[Viés|vieses]]. Esse processo é repetido muitas vezes até que as previsões melhorem.
 
 ## Explicação detalhada
 
@@ -21,4 +21,3 @@ Depois, um **otimizador** aplica os ajustes. Um exemplo comum é o **gradiente d
 A quantidade de ajuste feita em cada etapa é controlada pela **taxa de aprendizado**. Uma taxa muito alta pode fazer a rede ultrapassar boas soluções. Uma taxa muito baixa pode tornar o treinamento lento.
 
 Esse ciclo é repetido com muitos exemplos. Com o tempo, a rede encontra pesos e vieses que representam melhor os padrões presentes nos dados.
-
