@@ -53,7 +53,7 @@ O **otimizador** ajusta os valores internos da rede durante o aprendizado. A **f
 modelo.fit(x_treino, y_treino, epochs=50)
 ```
 
-`x_treino` contém os dados de entrada, `y_treino` contém as respostas corretas e `epochs=50` indica que o modelo estudará os dados 50 vezes.
+`x_treino` contém os dados de entrada, `y_treino` contém as respostas corretas e `epochs=50` indica que o modelo estudará os dados durante 50 [[Época|épocas]].
 
 5. Fazer previsões:
 
