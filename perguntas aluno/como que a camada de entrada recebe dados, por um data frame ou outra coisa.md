@@ -95,3 +95,77 @@ modelo.fit(X_train, y_train)
 Também é possível criar os dados diretamente no código, sem usar um arquivo. Isso acontece no exercício dos pontos no centro e no anel: o NumPy gera as coordenadas e os rótulos, que depois são enviados ao modelo.
 
 Portanto, o arquivo é apenas uma possível fonte dos dados. A rede recebe os números preparados pelo código, não o arquivo em si.
+
+## Depois que o tensor é gerado, ele fica na memória RAM? Como ele vai para a camada de entrada?
+
+## Resposta
+
+Sim. Quando um array ou tensor é criado, seus valores normalmente ficam na **memória RAM** do computador. Porém, a camada de entrada não é um recipiente separado para o qual o Python precisa copiar manualmente os dados.
+
+Quando executamos:
+
+```python
+modelo.fit(X_train, y_train, batch_size=32)
+```
+
+o processo ocorre, de forma simplificada, assim:
+
+```text
+X_train na memória RAM
+        ↓
+Keras separa um lote de exemplos
+        ↓
+o lote é transformado em um tensor
+        ↓
+o tensor é colocado no dispositivo de cálculo
+        ↓
+a rede executa os cálculos da primeira camada
+        ↓
+o resultado segue para as próximas camadas
+```
+
+O **dispositivo de cálculo** pode ser:
+
+- a CPU, que trabalha usando a memória RAM;
+- uma GPU, que normalmente usa sua própria memória, chamada **VRAM**.
+
+Se o treinamento estiver usando uma GPU, o sistema copia para a VRAM os lotes necessários ao cálculo. Isso não significa que todos os dados precisam ser copiados de uma vez. Eles podem ser enviados lote por lote.
+
+Imagine que `X_train` tenha formato `(1000, 4)`:
+
+```text
+1000 exemplos
+4 valores em cada exemplo
+```
+
+Se `batch_size=32`, o Keras seleciona inicialmente 32 exemplos. O tensor desse lote terá formato `(32, 4)`.
+
+Uma entrada declarada assim:
+
+```python
+keras.Input(shape=(4,))
+```
+
+informa que **cada exemplo** precisa possuir quatro valores. Ela não guarda o tensor inteiro. Sua função principal é informar e verificar o formato esperado pela rede.
+
+O lote `(32, 4)` chega à primeira camada que realiza cálculos. Se ela for:
+
+```python
+layers.Dense(8, activation="relu")
+```
+
+cada um dos 32 exemplos passa pelos oito neurônios. A camada multiplica os valores de entrada pelos pesos, soma os vieses e aplica a função ReLU. Sua saída terá formato `(32, 8)`:
+
+```text
+entrada do lote:  (32, 4)
+                         ↓
+camada Dense com 8 neurônios
+                         ↓
+saída da camada:  (32, 8)
+```
+
+Essa saída se torna automaticamente a entrada da camada seguinte. O Keras já conhece a ordem das camadas e executa essas operações quando `fit`, `predict` ou `evaluate` é chamado.
+
+Portanto, não existe um comando separado para “colocar o tensor na camada de entrada”. Ao chamar `modelo.fit(X_train, y_train)`, entregamos os dados ao Keras. Ele forma os lotes, coloca cada tensor no dispositivo de cálculo e faz os valores percorrerem as camadas na ordem definida no modelo.
+
+Veja também: [[perguntas aluno/o que seriam esses valores de entrada de um neurônio|O que seriam os valores de entrada de um neurônio?]]
