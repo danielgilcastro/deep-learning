@@ -26,7 +26,7 @@ No Keras, uma rede para três classes pode terminar assim:
 layers.Dense(3, activation="softmax")
 ```
 
-A função `softmax` produz uma probabilidade para cada classe. As probabilidades somam $1$:
+A função [[Softmax|softmax]] produz uma probabilidade para cada classe. As probabilidades somam $1$:
 
 ```text
 cachorro: 0,05

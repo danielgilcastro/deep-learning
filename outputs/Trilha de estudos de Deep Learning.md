@@ -46,9 +46,9 @@ Esta nota organiza o conteúdo do projeto em uma ordem progressiva. Os materiais
 
 ### Antes de avançar
 
-- [ ] Consigo explicar deep learning com minhas próprias palavras.
-- [ ] Consigo dar um exemplo de classificação e um de regressão.
-- [ ] Consigo explicar por que uma rede precisa de exemplos com respostas corretas durante o aprendizado supervisionado.
+- [x] Consigo explicar deep learning com minhas próprias palavras.
+- [x] Consigo dar um exemplo de classificação e um de regressão.
+- [x] Consigo explicar por que uma rede precisa de exemplos com respostas corretas durante o aprendizado supervisionado.
 
 ---
 
