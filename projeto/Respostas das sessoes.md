@@ -27,19 +27,19 @@ https://www.tensorflow.org/datasets/catalog/binary_alpha_digits?hl=pt-br
 
 ### Como foram explorados e preparados?
 
-***Pendente (procurar dentro do numpy / dataframe como iremos tratar os dados)
+
 
 
 ### Como foram divididos em treino, validação e teste?
 
-***Pedente ( pesquisar como iremos fazer as divisoes e porque)
+
 
 
 ## 3. Arquitetura e desempenho
 
 ### Como a rede foi construída?
+**Resposta:**
 
-***Pendente ()
 
 
 ### Quais configurações foram utilizadas?

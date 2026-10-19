@@ -1,0 +1,18 @@
+{
+  "Baseline constante": {
+    "accuracy": 0.027777777777777776,
+    "precision_macro": 0.0007716049382716049,
+    "recall_macro": 0.027777777777777776,
+    "f1_macro": 0.0015015015015015015,
+    "n": 216,
+    "correct": 6
+  },
+  "CNN Dropout": {
+    "accuracy": 0.8240740740740741,
+    "precision_macro": 0.835383597883598,
+    "recall_macro": 0.8240740740740741,
+    "f1_macro": 0.8174223924223925,
+    "n": 216,
+    "correct": 178
+  }
+}

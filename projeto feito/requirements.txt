@@ -1,0 +1,12 @@
+# Dependências do experimento. O Colab instala versões compatíveis com seu Python.
+# As versões exatas da execução entregue estão em resultados/ambiente.json.
+tensorflow>=2.16,<3
+keras>=3,<4
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+scikit-learn>=1.4
+ipython>=8
+# Para gerar o relatório local:
+reportlab>=4
+Pillow>=10
