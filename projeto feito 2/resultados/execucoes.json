@@ -1,0 +1,20 @@
+{
+  "MLP": {
+    "epochs": 29,
+    "best_epoch": 19,
+    "parameters": 22884,
+    "seconds": 2.5889513000147417
+  },
+  "CNN inicial": {
+    "epochs": 20,
+    "best_epoch": 10,
+    "parameters": 48164,
+    "seconds": 4.3903120999457315
+  },
+  "CNN Dropout": {
+    "epochs": 39,
+    "best_epoch": 29,
+    "parameters": 48164,
+    "seconds": 8.142332999967039
+  }
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "count": 4,
+    "true": "O",
+    "predicted": "0"
+  },
+  {
+    "count": 2,
+    "true": "S",
+    "predicted": "5"
+  },
+  {
+    "count": 1,
+    "true": "Z",
+    "predicted": "2"
+  },
+  {
+    "count": 1,
+    "true": "T",
+    "predicted": "J"
+  },
+  {
+    "count": 1,
+    "true": "T",
+    "predicted": "I"
+  },
+  {
+    "count": 1,
+    "true": "S",
+    "predicted": "8"
+  },
+  {
+    "count": 1,
+    "true": "R",
+    "predicted": "A"
+  },
+  {
+    "count": 1,
+    "true": "Q",
+    "predicted": "G"
+  },
+  {
+    "count": 1,
+    "true": "O",
+    "predicted": "P"
+  },
+  {
+    "count": 1,
+    "true": "N",
+    "predicted": "M"
+  },
+  {
+    "count": 1,
+    "true": "M",
+    "predicted": "N"
+  },
+  {
+    "count": 1,
+    "true": "M",
+    "predicted": "A"
+  },
+  {
+    "count": 1,
+    "true": "K",
+    "predicted": "X"
+  },
+  {
+    "count": 1,
+    "true": "K",
+    "predicted": "R"
+  },
+  {
+    "count": 1,
+    "true": "K",
+    "predicted": "L"
+  },
+  {
+    "count": 1,
+    "true": "J",
+    "predicted": "D"
+  },
+  {
+    "count": 1,
+    "true": "H",
+    "predicted": "W"
+  },
+  {
+    "count": 1,
+    "true": "H",
+    "predicted": "N"
+  },
+  {
+    "count": 1,
+    "true": "G",
+    "predicted": "9"
+  },
+  {
+    "count": 1,
+    "true": "G",
+    "predicted": "6"
+  },
+  {
+    "count": 1,
+    "true": "F",
+    "predicted": "P"
+  },
+  {
+    "count": 1,
+    "true": "F",
+    "predicted": "K"
+  },
+  {
+    "count": 1,
+    "true": "D",
+    "predicted": "P"
+  },
+  {
+    "count": 1,
+    "true": "B",
+    "predicted": "8"
+  },
+  {
+    "count": 1,
+    "true": "B",
+    "predicted": "3"
+  },
+  {
+    "count": 1,
+    "true": "A",
+    "predicted": "X"
+  },
+  {
+    "count": 1,
+    "true": "8",
+    "predicted": "3"
+  },
+  {
+    "count": 1,
+    "true": "7",
+    "predicted": "Y"
+  },
+  {
+    "count": 1,
+    "true": "5",
+    "predicted": "S"
+  },
+  {
+    "count": 1,
+    "true": "4",
+    "predicted": "U"
+  },
+  {
+    "count": 1,
+    "true": "3",
+    "predicted": "S"
+  },
+  {
+    "count": 1,
+    "true": "3",
+    "predicted": "2"
+  },
+  {
+    "count": 1,
+    "true": "0",
+    "predicted": "P"
+  },
+  {
+    "count": 1,
+    "true": "0",
+    "predicted": "O"
+  }
+]

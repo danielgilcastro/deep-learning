@@ -1,0 +1,5 @@
+{
+  "chosen": "CNN Dropout",
+  "criterion": "max val_accuracy; tie: min val_loss, min parameters",
+  "test_used_for_selection": false
+}

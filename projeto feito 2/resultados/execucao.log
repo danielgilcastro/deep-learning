@@ -1,0 +1,596 @@
+
+CELULA 1
+{
+  "python": "3.14.7",
+  "tensorflow": "2.22.0-rc0",
+  "keras": "3.15.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "scikit-learn": "1.9.1",
+  "matplotlib": "3.11.2",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ]
+}
+
+CELULA 2
+{
+  "samples": 1404,
+  "shape": [
+    1404,
+    20,
+    16,
+    1
+  ],
+  "classes": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "count_per_class": [
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39
+  ],
+  "unique_images": 1363,
+  "duplicate_groups": 39,
+  "duplicate_excess": 41,
+  "conflicting_groups": 38,
+  "conflicting_records": 78,
+  "conflicting_labels": [
+    "0",
+    "O"
+  ],
+  "sha256": "3ee9392e64e4e3bb7b35502b69bf2555a0b4197c1b31048c4189b84bc0bc6ea7",
+  "source": "https://cs.nyu.edu/home/people/in_memoriam/roweis/data/binaryalphadigs.mat"
+}
+
+CELULA 3
+{
+  "treino": {
+    "total": 971,
+    "por_classe": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      26,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ],
+    "imagens_unicas": 943
+  },
+  "validacao": {
+    "total": 217,
+    "por_classe": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      7,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "imagens_unicas": 210
+  },
+  "teste": {
+    "total": 216,
+    "por_classe": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "imagens_unicas": 210
+  }
+}
+
+CELULA 4
+Classe do baseline: 0 
+Validação: {'Baseline constante': {'accuracy': 0.027649769585253458, 'precision_macro': 0.0007680491551459293, 'recall_macro': 0.027777777777777776, 'f1_macro': 0.0014947683109118087, 'n': 217, 'correct': 6}}
+
+CELULA 5
+Model: "sequential"
+┌─────────────────────────────────┬────────────────────────┬───────────────┐
+│ Layer (type)                    │ Output Shape           │       Param # │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 320)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │        20,544 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 36)             │         2,340 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 22,884 (89.39 KB)
+ Trainable params: 22,884 (89.39 KB)
+ Non-trainable params: 0 (0.00 B)
+C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/80
+31/31 - 1s - 31ms/step - accuracy: 0.0803 - loss: 3.4483 - val_accuracy: 0.1843 - val_loss: 3.1594
+Epoch 2/80
+31/31 - 0s - 2ms/step - accuracy: 0.2945 - loss: 2.8250 - val_accuracy: 0.3594 - val_loss: 2.5550
+Epoch 3/80
+31/31 - 0s - 1ms/step - accuracy: 0.5015 - loss: 2.1399 - val_accuracy: 0.4977 - val_loss: 1.9786
+Epoch 4/80
+31/31 - 0s - 1ms/step - accuracy: 0.6334 - loss: 1.5925 - val_accuracy: 0.6129 - val_loss: 1.5739
+Epoch 5/80
+31/31 - 0s - 1ms/step - accuracy: 0.7096 - loss: 1.2487 - val_accuracy: 0.6267 - val_loss: 1.3784
+Epoch 6/80
+31/31 - 0s - 2ms/step - accuracy: 0.7333 - loss: 1.0453 - val_accuracy: 0.6498 - val_loss: 1.2354
+Epoch 7/80
+31/31 - 0s - 2ms/step - accuracy: 0.7786 - loss: 0.8784 - val_accuracy: 0.6866 - val_loss: 1.1547
+Epoch 8/80
+31/31 - 0s - 2ms/step - accuracy: 0.8115 - loss: 0.7694 - val_accuracy: 0.6636 - val_loss: 1.1420
+Epoch 9/80
+31/31 - 0s - 2ms/step - accuracy: 0.8280 - loss: 0.6986 - val_accuracy: 0.7189 - val_loss: 1.0746
+Epoch 10/80
+31/31 - 0s - 2ms/step - accuracy: 0.8486 - loss: 0.6237 - val_accuracy: 0.6866 - val_loss: 1.0595
+Epoch 11/80
+31/31 - 0s - 2ms/step - accuracy: 0.8661 - loss: 0.5654 - val_accuracy: 0.7097 - val_loss: 1.0440
+Epoch 12/80
+31/31 - 0s - 1ms/step - accuracy: 0.8888 - loss: 0.5095 - val_accuracy: 0.6959 - val_loss: 1.0353
+Epoch 13/80
+31/31 - 0s - 1ms/step - accuracy: 0.8898 - loss: 0.4707 - val_accuracy: 0.7005 - val_loss: 1.0151
+Epoch 14/80
+31/31 - 0s - 1ms/step - accuracy: 0.9053 - loss: 0.4285 - val_accuracy: 0.7143 - val_loss: 1.0125
+Epoch 15/80
+31/31 - 0s - 1ms/step - accuracy: 0.9114 - loss: 0.3962 - val_accuracy: 0.7005 - val_loss: 1.0087
+Epoch 16/80
+31/31 - 0s - 1ms/step - accuracy: 0.9197 - loss: 0.3636 - val_accuracy: 0.7143 - val_loss: 1.0166
+Epoch 17/80
+31/31 - 0s - 1ms/step - accuracy: 0.9413 - loss: 0.3327 - val_accuracy: 0.7143 - val_loss: 0.9916
+Epoch 18/80
+31/31 - 0s - 1ms/step - accuracy: 0.9279 - loss: 0.3112 - val_accuracy: 0.7235 - val_loss: 0.9980
+Epoch 19/80
+31/31 - 0s - 1ms/step - accuracy: 0.9495 - loss: 0.2890 - val_accuracy: 0.7143 - val_loss: 0.9698
+Epoch 20/80
+31/31 - 0s - 1ms/step - accuracy: 0.9413 - loss: 0.2720 - val_accuracy: 0.7143 - val_loss: 1.0044
+Epoch 21/80
+31/31 - 0s - 1ms/step - accuracy: 0.9516 - loss: 0.2450 - val_accuracy: 0.7143 - val_loss: 0.9972
+Epoch 22/80
+31/31 - 0s - 1ms/step - accuracy: 0.9619 - loss: 0.2299 - val_accuracy: 0.7051 - val_loss: 0.9772
+Epoch 23/80
+31/31 - 0s - 1ms/step - accuracy: 0.9598 - loss: 0.2153 - val_accuracy: 0.6959 - val_loss: 1.0078
+Epoch 24/80
+31/31 - 0s - 1ms/step - accuracy: 0.9609 - loss: 0.2005 - val_accuracy: 0.7235 - val_loss: 0.9866
+Epoch 25/80
+31/31 - 0s - 1ms/step - accuracy: 0.9681 - loss: 0.1970 - val_accuracy: 0.7235 - val_loss: 0.9921
+Epoch 26/80
+31/31 - 0s - 1ms/step - accuracy: 0.9691 - loss: 0.1721 - val_accuracy: 0.7143 - val_loss: 0.9922
+Epoch 27/80
+31/31 - 0s - 1ms/step - accuracy: 0.9629 - loss: 0.1596 - val_accuracy: 0.7189 - val_loss: 0.9944
+Epoch 28/80
+31/31 - 0s - 1ms/step - accuracy: 0.9670 - loss: 0.1504 - val_accuracy: 0.7189 - val_loss: 0.9965
+Epoch 29/80
+31/31 - 0s - 1ms/step - accuracy: 0.9712 - loss: 0.1485 - val_accuracy: 0.7281 - val_loss: 1.0074
+Model: "sequential"
+┌─────────────────────────────────┬────────────────────────┬───────────────┐
+│ Layer (type)                    │ Output Shape           │       Param # │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d (Conv2D)                 │ (None, 20, 16, 16)     │           160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d (MaxPooling2D)    │ (None, 10, 8, 16)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_1 (Conv2D)               │ (None, 10, 8, 32)      │         4,640 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d_1 (MaxPooling2D)  │ (None, 5, 4, 32)       │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 640)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │        41,024 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 36)             │         2,340 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 48,164 (188.14 KB)
+ Trainable params: 48,164 (188.14 KB)
+ Non-trainable params: 0 (0.00 B)
+C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/80
+31/31 - 1s - 38ms/step - accuracy: 0.0494 - loss: 3.5330 - val_accuracy: 0.1106 - val_loss: 3.4015
+Epoch 2/80
+31/31 - 0s - 7ms/step - accuracy: 0.2039 - loss: 3.1073 - val_accuracy: 0.2719 - val_loss: 2.6159
+Epoch 3/80
+31/31 - 0s - 5ms/step - accuracy: 0.4336 - loss: 2.0592 - val_accuracy: 0.4793 - val_loss: 1.7648
+Epoch 4/80
+31/31 - 0s - 4ms/step - accuracy: 0.6014 - loss: 1.3820 - val_accuracy: 0.5945 - val_loss: 1.3425
+Epoch 5/80
+31/31 - 0s - 4ms/step - accuracy: 0.6540 - loss: 1.0707 - val_accuracy: 0.6313 - val_loss: 1.1641
+Epoch 6/80
+31/31 - 0s - 4ms/step - accuracy: 0.7147 - loss: 0.9150 - val_accuracy: 0.7097 - val_loss: 1.0354
+Epoch 7/80
+31/31 - 0s - 4ms/step - accuracy: 0.7683 - loss: 0.7571 - val_accuracy: 0.6682 - val_loss: 0.9935
+Epoch 8/80
+31/31 - 0s - 4ms/step - accuracy: 0.7951 - loss: 0.6447 - val_accuracy: 0.7005 - val_loss: 1.0450
+Epoch 9/80
+31/31 - 0s - 4ms/step - accuracy: 0.8249 - loss: 0.5754 - val_accuracy: 0.7281 - val_loss: 0.9129
+Epoch 10/80
+31/31 - 0s - 4ms/step - accuracy: 0.8373 - loss: 0.5097 - val_accuracy: 0.7373 - val_loss: 0.8397
+Epoch 11/80
+31/31 - 0s - 4ms/step - accuracy: 0.8527 - loss: 0.4466 - val_accuracy: 0.7327 - val_loss: 0.8759
+Epoch 12/80
+31/31 - 0s - 4ms/step - accuracy: 0.8764 - loss: 0.3936 - val_accuracy: 0.7327 - val_loss: 0.8904
+Epoch 13/80
+31/31 - 0s - 4ms/step - accuracy: 0.8641 - loss: 0.3711 - val_accuracy: 0.7143 - val_loss: 0.9659
+Epoch 14/80
+31/31 - 0s - 4ms/step - accuracy: 0.8847 - loss: 0.3539 - val_accuracy: 0.7051 - val_loss: 0.9207
+Epoch 15/80
+31/31 - 0s - 4ms/step - accuracy: 0.9104 - loss: 0.3056 - val_accuracy: 0.7051 - val_loss: 1.0225
+Epoch 16/80
+31/31 - 0s - 4ms/step - accuracy: 0.9001 - loss: 0.2907 - val_accuracy: 0.7281 - val_loss: 0.9043
+Epoch 17/80
+31/31 - 0s - 4ms/step - accuracy: 0.9238 - loss: 0.2314 - val_accuracy: 0.7558 - val_loss: 0.8976
+Epoch 18/80
+31/31 - 0s - 4ms/step - accuracy: 0.9238 - loss: 0.2379 - val_accuracy: 0.7558 - val_loss: 0.8625
+Epoch 19/80
+31/31 - 0s - 4ms/step - accuracy: 0.9320 - loss: 0.2399 - val_accuracy: 0.7143 - val_loss: 0.9426
+Epoch 20/80
+31/31 - 0s - 4ms/step - accuracy: 0.9413 - loss: 0.1776 - val_accuracy: 0.7281 - val_loss: 0.8884
+Model: "sequential"
+┌─────────────────────────────────┬────────────────────────┬───────────────┐
+│ Layer (type)                    │ Output Shape           │       Param # │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d (Conv2D)                 │ (None, 20, 16, 16)     │           160 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d (MaxPooling2D)    │ (None, 10, 8, 16)      │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_1 (Conv2D)               │ (None, 10, 8, 32)      │         4,640 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d_1 (MaxPooling2D)  │ (None, 5, 4, 32)       │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 640)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │        41,024 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 64)             │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 36)             │         2,340 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 48,164 (188.14 KB)
+ Trainable params: 48,164 (188.14 KB)
+ Non-trainable params: 0 (0.00 B)
+C:\Users\danie\AppData\Local\Programs\Python\Python314\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/80
+31/31 - 1s - 39ms/step - accuracy: 0.0525 - loss: 3.5518 - val_accuracy: 0.0922 - val_loss: 3.4614
+Epoch 2/80
+31/31 - 0s - 7ms/step - accuracy: 0.1215 - loss: 3.3273 - val_accuracy: 0.2212 - val_loss: 3.0220
+Epoch 3/80
+31/31 - 0s - 4ms/step - accuracy: 0.2132 - loss: 2.7787 - val_accuracy: 0.3871 - val_loss: 2.3498
+Epoch 4/80
+31/31 - 0s - 4ms/step - accuracy: 0.3151 - loss: 2.2921 - val_accuracy: 0.5253 - val_loss: 1.7818
+Epoch 5/80
+31/31 - 0s - 4ms/step - accuracy: 0.4315 - loss: 1.8870 - val_accuracy: 0.5945 - val_loss: 1.4151
+Epoch 6/80
+31/31 - 0s - 4ms/step - accuracy: 0.4882 - loss: 1.6718 - val_accuracy: 0.6544 - val_loss: 1.2687
+Epoch 7/80
+31/31 - 0s - 4ms/step - accuracy: 0.5499 - loss: 1.4565 - val_accuracy: 0.6682 - val_loss: 1.1443
+Epoch 8/80
+31/31 - 0s - 4ms/step - accuracy: 0.5695 - loss: 1.3581 - val_accuracy: 0.6912 - val_loss: 1.0695
+Epoch 9/80
+31/31 - 0s - 4ms/step - accuracy: 0.6323 - loss: 1.1979 - val_accuracy: 0.6959 - val_loss: 0.9455
+Epoch 10/80
+31/31 - 0s - 4ms/step - accuracy: 0.6447 - loss: 1.1231 - val_accuracy: 0.7189 - val_loss: 0.9240
+Epoch 11/80
+31/31 - 0s - 4ms/step - accuracy: 0.6447 - loss: 1.0691 - val_accuracy: 0.7327 - val_loss: 0.8686
+Epoch 12/80
+31/31 - 0s - 4ms/step - accuracy: 0.6869 - loss: 0.9655 - val_accuracy: 0.7235 - val_loss: 0.8377
+Epoch 13/80
+31/31 - 0s - 4ms/step - accuracy: 0.6756 - loss: 0.9514 - val_accuracy: 0.7281 - val_loss: 0.8476
+Epoch 14/80
+31/31 - 0s - 5ms/step - accuracy: 0.7096 - loss: 0.8665 - val_accuracy: 0.7512 - val_loss: 0.8238
+Epoch 15/80
+31/31 - 0s - 4ms/step - accuracy: 0.7518 - loss: 0.7955 - val_accuracy: 0.7419 - val_loss: 0.8203
+Epoch 16/80
+31/31 - 0s - 4ms/step - accuracy: 0.7446 - loss: 0.7670 - val_accuracy: 0.7465 - val_loss: 0.7849
+Epoch 17/80
+31/31 - 0s - 4ms/step - accuracy: 0.7518 - loss: 0.7227 - val_accuracy: 0.7558 - val_loss: 0.7396
+Epoch 18/80
+31/31 - 0s - 4ms/step - accuracy: 0.7858 - loss: 0.6709 - val_accuracy: 0.7558 - val_loss: 0.7652
+Epoch 19/80
+31/31 - 0s - 4ms/step - accuracy: 0.7755 - loss: 0.6444 - val_accuracy: 0.7558 - val_loss: 0.7250
+Epoch 20/80
+31/31 - 0s - 5ms/step - accuracy: 0.7930 - loss: 0.6191 - val_accuracy: 0.7558 - val_loss: 0.7458
+Epoch 21/80
+31/31 - 0s - 4ms/step - accuracy: 0.7796 - loss: 0.6187 - val_accuracy: 0.7558 - val_loss: 0.7150
+Epoch 22/80
+31/31 - 0s - 4ms/step - accuracy: 0.8023 - loss: 0.5348 - val_accuracy: 0.7558 - val_loss: 0.7222
+Epoch 23/80
+31/31 - 0s - 4ms/step - accuracy: 0.8260 - loss: 0.4885 - val_accuracy: 0.7742 - val_loss: 0.7343
+Epoch 24/80
+31/31 - 0s - 4ms/step - accuracy: 0.8218 - loss: 0.4948 - val_accuracy: 0.7604 - val_loss: 0.7252
+Epoch 25/80
+31/31 - 0s - 4ms/step - accuracy: 0.8393 - loss: 0.4507 - val_accuracy: 0.7696 - val_loss: 0.7163
+Epoch 26/80
+31/31 - 0s - 4ms/step - accuracy: 0.8383 - loss: 0.4725 - val_accuracy: 0.7788 - val_loss: 0.6985
+Epoch 27/80
+31/31 - 0s - 4ms/step - accuracy: 0.8538 - loss: 0.4096 - val_accuracy: 0.7558 - val_loss: 0.7301
+Epoch 28/80
+31/31 - 0s - 5ms/step - accuracy: 0.8486 - loss: 0.4183 - val_accuracy: 0.7788 - val_loss: 0.7137
+Epoch 29/80
+31/31 - 0s - 4ms/step - accuracy: 0.8517 - loss: 0.4239 - val_accuracy: 0.7742 - val_loss: 0.6888
+Epoch 30/80
+31/31 - 0s - 5ms/step - accuracy: 0.8486 - loss: 0.4082 - val_accuracy: 0.7650 - val_loss: 0.6935
+Epoch 31/80
+31/31 - 0s - 4ms/step - accuracy: 0.8847 - loss: 0.3059 - val_accuracy: 0.7742 - val_loss: 0.7372
+Epoch 32/80
+31/31 - 0s - 5ms/step - accuracy: 0.8785 - loss: 0.3307 - val_accuracy: 0.7742 - val_loss: 0.6966
+Epoch 33/80
+31/31 - 0s - 5ms/step - accuracy: 0.8867 - loss: 0.2906 - val_accuracy: 0.7834 - val_loss: 0.7111
+Epoch 34/80
+31/31 - 0s - 5ms/step - accuracy: 0.8929 - loss: 0.3070 - val_accuracy: 0.7834 - val_loss: 0.7058
+Epoch 35/80
+31/31 - 0s - 5ms/step - accuracy: 0.8826 - loss: 0.3115 - val_accuracy: 0.7788 - val_loss: 0.7157
+Epoch 36/80
+31/31 - 0s - 5ms/step - accuracy: 0.8877 - loss: 0.3073 - val_accuracy: 0.7696 - val_loss: 0.7259
+Epoch 37/80
+31/31 - 0s - 4ms/step - accuracy: 0.8908 - loss: 0.3132 - val_accuracy: 0.7696 - val_loss: 0.7698
+Epoch 38/80
+31/31 - 0s - 4ms/step - accuracy: 0.8980 - loss: 0.2861 - val_accuracy: 0.7742 - val_loss: 0.7068
+Epoch 39/80
+31/31 - 0s - 5ms/step - accuracy: 0.8919 - loss: 0.3034 - val_accuracy: 0.7604 - val_loss: 0.7314
+MODELO SELECIONADO SOMENTE NA VALIDAÇÃO: CNN Dropout
+{
+  "Baseline constante": {
+    "accuracy": 0.027649769585253458,
+    "precision_macro": 0.0007680491551459293,
+    "recall_macro": 0.027777777777777776,
+    "f1_macro": 0.0014947683109118087,
+    "n": 217,
+    "correct": 6
+  },
+  "MLP": {
+    "accuracy": 0.7142857142857143,
+    "precision_macro": 0.7390490682157349,
+    "recall_macro": 0.7136243386243386,
+    "f1_macro": 0.7007825708290105,
+    "n": 217,
+    "correct": 155,
+    "loss": 0.9697995781898499
+  },
+  "CNN inicial": {
+    "accuracy": 0.7373271889400922,
+    "precision_macro": 0.7707120811287478,
+    "recall_macro": 0.7367724867724869,
+    "f1_macro": 0.7400029754196421,
+    "n": 217,
+    "correct": 160,
+    "loss": 0.8397417664527893
+  },
+  "CNN Dropout": {
+    "accuracy": 0.7741935483870968,
+    "precision_macro": 0.7941247795414462,
+    "recall_macro": 0.773148148148148,
+    "f1_macro": 0.7712177528354,
+    "n": 217,
+    "correct": 168,
+    "loss": 0.6887603402137756
+  }
+}
+
+CELULA 6
+
+CELULA 7
+{
+  "Baseline constante": {
+    "accuracy": 0.027777777777777776,
+    "precision_macro": 0.0007716049382716049,
+    "recall_macro": 0.027777777777777776,
+    "f1_macro": 0.0015015015015015015,
+    "n": 216,
+    "correct": 6
+  },
+  "CNN Dropout": {
+    "accuracy": 0.8240740740740741,
+    "precision_macro": 0.835383597883598,
+    "recall_macro": 0.8240740740740741,
+    "f1_macro": 0.8174223924223925,
+    "n": 216,
+    "correct": 178
+  }
+}
+              precision    recall  f1-score   support
+
+           0       0.50      0.67      0.57         6
+           1       1.00      1.00      1.00         6
+           2       0.75      1.00      0.86         6
+           3       0.67      0.67      0.67         6
+           4       1.00      0.83      0.91         6
+           5       0.71      0.83      0.77         6
+           6       0.86      1.00      0.92         6
+           7       1.00      0.83      0.91         6
+           8       0.71      0.83      0.77         6
+           9       0.86      1.00      0.92         6
+           A       0.71      0.83      0.77         6
+           B       1.00      0.67      0.80         6
+           C       1.00      1.00      1.00         6
+           D       0.83      0.83      0.83         6
+           E       1.00      1.00      1.00         6
+           F       1.00      0.67      0.80         6
+           G       0.80      0.67      0.73         6
+           H       1.00      0.67      0.80         6
+           I       0.86      1.00      0.92         6
+           J       0.83      0.83      0.83         6
+           K       0.75      0.50      0.60         6
+           L       0.86      1.00      0.92         6
+           M       0.80      0.67      0.73         6
+           N       0.71      0.83      0.77         6
+           O       0.50      0.17      0.25         6
+           P       0.60      1.00      0.75         6
+           Q       1.00      0.83      0.91         6
+           R       0.83      0.83      0.83         6
+           S       0.60      0.50      0.55         6
+           T       1.00      0.67      0.80         6
+           U       0.86      1.00      0.92         6
+           V       1.00      1.00      1.00         6
+           W       0.86      1.00      0.92         6
+           X       0.75      1.00      0.86         6
+           Y       0.86      1.00      0.92         6
+           Z       1.00      0.83      0.91         6
+
+    accuracy                           0.82       216
+   macro avg       0.84      0.82      0.82       216
+weighted avg       0.84      0.82      0.82       216
+
+Principais confusões (quantidade, real, previsto): [(4, 'O', '0'), (2, 'S', '5'), (1, 'Z', '2'), (1, 'T', 'J'), (1, 'T', 'I'), (1, 'S', '8'), (1, 'R', 'A'), (1, 'Q', 'G'), (1, 'O', 'P'), (1, 'N', 'M')]
+
+CELULA 8
+Demonstração com exemplo do treino: [{'classe': '0', 'pontuacao_softmax': 0.49963322281837463}, {'classe': 'O', 'pontuacao_softmax': 0.48848506808280945}, {'classe': 'C', 'pontuacao_softmax': 0.004635938908904791}]
+Arquivos de evidência e modelo salvos em: C:\obsidianVault\obsidian\copilot\projects\Deep Learning\projeto feito\resultados
