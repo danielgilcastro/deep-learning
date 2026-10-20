@@ -3,18 +3,18 @@
     "epochs": 29,
     "best_epoch": 19,
     "parameters": 22884,
-    "seconds": 2.5889513000147417
+    "seconds": 2.4521934000076726
   },
   "CNN inicial": {
     "epochs": 20,
     "best_epoch": 10,
     "parameters": 48164,
-    "seconds": 4.3903120999457315
+    "seconds": 4.3375334000447765
   },
   "CNN Dropout": {
     "epochs": 39,
     "best_epoch": 29,
     "parameters": 48164,
-    "seconds": 8.142332999967039
+    "seconds": 7.389971800032072
   }
 }

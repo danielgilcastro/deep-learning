@@ -12,7 +12,7 @@ Os números vêm do [[Projeto_Grupo4.ipynb|notebook do projeto]]. A ordem segue 
 
 ## 2. Dados utilizados
 
-**Origem:** base pública Binary Alpha Digits, escolhida pelo grupo.
+**Origem:** base pública Binary Alpha Digits, escolhida pela equipe no catálogo TensorFlow Datasets. O arquivo bruto veio do endereço público indicado para a base.
 
 **Preparação:** usamos as 1.404 imagens e conferimos dimensões, classes e pixels. Encontramos imagens iguais com rótulos `0` e `O`.
 

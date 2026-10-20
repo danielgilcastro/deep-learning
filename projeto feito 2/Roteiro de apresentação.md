@@ -18,7 +18,7 @@ Use os dez slides de [[Apresentacao_Grupo4.pptx]]. Cada pessoa fala por cerca de
 
 ## Bruno Pimentel — slides 3 e 4
 
-“A base tem 1.404 imagens, 39 por classe. Os pixels já valem 0 ou 1.”
+“A equipe escolheu a base Binary Alpha Digits no catálogo TensorFlow Datasets. Ela tem 1.404 imagens, 39 por classe. Os pixels já valem 0 ou 1.”
 
 “Encontramos imagens iguais com rótulos `0` e `O`. Mantivemos cada grupo de imagens idênticas no mesmo conjunto. Ficamos com 971 imagens de treino, 217 de validação e 216 de teste. Assim, não há uma cópia exata em conjuntos diferentes.”
 

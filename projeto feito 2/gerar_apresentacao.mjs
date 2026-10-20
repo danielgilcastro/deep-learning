@@ -62,9 +62,10 @@ txt(s,'Referência: prever sempre 0',64,402,1100,55,35,navy,true);
 txt(s,'Acertou 6 de 217 imagens de validação: 2,76%.',64,478,1120,80,30);
 
 s=slide('Os dados do projeto','Bruno Pimentel | 1 minuto e 30 segundos',
-  'A base escolhida foi Binary Alpha Digits. São 1.404 imagens, 39 por classe. Exemplos vêm do treino. Fonte: notebook do projeto e arquivo público da Universidade de Nova York.');
+  'A equipe escolheu Binary Alpha Digits no catálogo TensorFlow Datasets. O notebook baixa o arquivo bruto do endereço público indicado para a base. São 1.404 imagens, 39 por classe. Exemplos vêm do treino.');
 txt(s,'1.404 imagens · 36 classes · 39 imagens por classe',64,145,1120,54,30,teal);
-await picture(s,'amostras.png',155,213,970,405);
+txt(s,'Fonte da escolha: catálogo TensorFlow Datasets.',64,194,1100,31,22,gray);
+await picture(s,'amostras.png',155,226,970,380);
 txt(s,'MAT (arquivo de dados em formato MATLAB).',64,620,1000,25,18,gray);
 
 s=slide('Como dividimos os dados','Bruno Pimentel | 1 minuto e 30 segundos',

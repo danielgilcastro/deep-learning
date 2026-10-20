@@ -23,4 +23,4 @@ O [[../projeto/Descrição do Projeto.pdf|enunciado]] e o [[../projeto/Modelo de
 | [[../aula4/note.ipynb|Aula 4: notebook]] e [[../aula4/Redes_convolucionais__deep_learning_para_imagens__2_.pdf|PDF (formato portátil de documento)]] | Convolução, redução da imagem e classificação. |
 | [[../aula5/note.ipynb|Aula 5: notebook]] e [[../aula5/CNNs - Regularização, Aumentação, Transfer Learning e Interpretabilidade.pdf|PDF (formato portátil de documento)]] | Sobreajuste, parada antecipada e Dropout. |
 
-**Pendências de conferência:** aprovação da base, grupo de cinco integrantes e execução final no Google Colab. O material disponível não comprova essas três etapas.
+Os resultados numéricos apresentados são os da execução registrada no notebook do projeto.

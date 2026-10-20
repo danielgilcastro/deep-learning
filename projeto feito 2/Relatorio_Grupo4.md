@@ -18,7 +18,7 @@ Cada imagem tem 20 linhas, 16 colunas e um canal. Os pixels valem 0 ou 1. A rede
 
 **Responsável: Bruno Pimentel.**
 
-A base Binary Alpha Digits foi escolhida pelo grupo. O notebook usa o [arquivo público da Universidade de Nova York](https://cs.nyu.edu/home/people/in_memoriam/roweis/data.html). São **1.404 imagens**, com 39 exemplos de cada uma das 36 classes. Usamos a base inteira. Conferimos tamanho, rótulos e valores dos pixels. Como os pixels já valem 0 ou 1, não dividimos seus valores por 255.
+A equipe escolheu Binary Alpha Digits no [catálogo TensorFlow Datasets](https://www.tensorflow.org/datasets/catalog/binary_alpha_digits). O notebook baixa o [arquivo bruto público](https://cs.nyu.edu/home/people/in_memoriam/roweis/data.html) indicado para essa base. São **1.404 imagens**, com 39 exemplos de cada uma das 36 classes. Usamos a base inteira. Conferimos tamanho, rótulos e valores dos pixels. Como os pixels já valem 0 ou 1, não dividimos seus valores por 255.
 
 ![[resultados/amostras.png]]
 
